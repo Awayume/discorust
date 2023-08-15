@@ -1,0 +1,45 @@
+[package]
+name = "discorust"
+version = "0.1.0-alpha0"
+authors = [
+    "Awayume <dev@awayume.jp>",
+]
+edition = "2021"
+rust-version = "1.70"
+description = "An API wrapper for Discord written in Rust."
+documentation = ""
+readme = "./README.md"
+homepage = ""
+repository = "https://github.com/Awayume/Discorust"
+license = "Apache-2.0"
+keywords = [
+    "discord",
+    "api",
+    "api-wrapper",
+    "bot",
+    "chat"
+]
+categories = [
+    "api-bindings",
+    "network-programming",
+    "web-programming",
+    "web-programming::http-client",
+    "web-programming::websocket",
+]
+publish = false
+
+
+[dependencies]
+
+
+[dev-dependencies]
+
+
+[features]
+default = []
+
+
+[workspace]
+members = []
+
+[workspace.dependencies]
