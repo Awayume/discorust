@@ -153,6 +153,7 @@ dependencies = [
 name = "discorust"
 version = "0.1.0-alpha0"
 dependencies = [
+ "once_cell",
  "reqwest",
  "tokio",
  "tokio-tungstenite",
