@@ -30,6 +30,7 @@ publish = false
 
 
 [dependencies]
+async-trait = "0.1.73"
 once_cell = "1.18.0"
 reqwest = "0.11.20"
 tokio = "1.32.0"
