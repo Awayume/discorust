@@ -18,7 +18,9 @@ jobs:
       - name: Cache Cargo
         uses: actions/cache@v3
         with:
-          path: '~/.cargo'
+          path: |
+            '~/.cargo'
+            './target'
           key: cargo-${{ hashFiles('Cargo.lock') }}
           restore-keys: cargo-
 
