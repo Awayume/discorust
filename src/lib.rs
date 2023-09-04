@@ -3,6 +3,5 @@
 
 #[cfg(feature = "http")]
 pub mod http;
-
 #[cfg(feature = "utils")]
 pub mod utils;
