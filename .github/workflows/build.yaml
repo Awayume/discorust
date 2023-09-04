@@ -30,8 +30,10 @@ jobs:
       - name: Build project
         run: |
           cargo build --all-features --workspace
-          echo version=$(grep -m1 "^version = " Cargo.toml | sed -e 's/version = //' -e 's/"//g') >> $GITHUB_ENV
+          echo version=$(grep -m1 '^version = ' Cargo.toml | sed -e 's/version = //' -e 's/"//g') >> $GITHUB_ENV
           echo commit=$(echo ${{ github.sha }} | cut -c 1-7) >> $GITHUB_ENV
+        env:
+          RUSTFLAGS: '--cfg reqwest_unstable'
 
       - name: Archive
         uses: actions/upload-artifact@v3
