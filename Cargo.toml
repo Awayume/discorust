@@ -41,7 +41,12 @@ tokio-tungstenite = "0.20.0"
 
 
 [features]
-default = []
+default = [
+    "http",
+    "utils",
+]
+http = []
+utils = []
 
 
 [workspace]
