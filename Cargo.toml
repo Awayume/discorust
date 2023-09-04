@@ -45,11 +45,17 @@ optional = true
 
 
 [features]
-default = [
-    "http",
-    "utils",
-]
+default = ["default_no_backend", "rustls_backend"]
+default_native_tls = ["default_no_backend", "native_tls_backend"]
+
+default_no_backend = ["http", "utils"]
+
+rustls_backend = ["reqwest/rustls", "tokio-tungstenite/rustls"]
+
+native_tls_backend = ["reqwest/native-tls", "tokio-tungstenite/native-tls"]
+
 http = ["reqwest"]
+http3 = ["http", "reqwest/http3"]
 utils = []
 
 
