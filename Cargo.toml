@@ -35,6 +35,10 @@ once_cell = "1.18.0"
 tokio = "1.32.0"
 tokio-tungstenite = "0.20.0"
 
+[dependencies.query_params]
+version = "0.1.0"
+optional = true
+
 [dependencies.reqwest]
 version = "0.11.20"
 features = ["gzip", "json"]
@@ -54,12 +58,10 @@ rustls_backend = ["reqwest/rustls", "tokio-tungstenite/rustls"]
 
 native_tls_backend = ["reqwest/native-tls", "tokio-tungstenite/native-tls"]
 
-http = ["reqwest"]
+http = ["query_params", "reqwest"]
 http3 = ["http", "reqwest/http3"]
 utils = []
 
 
 [workspace]
 members = []
-
-[workspace.dependencies]
