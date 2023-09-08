@@ -40,6 +40,15 @@ version = "0.11.20"
 features = ["gzip", "json"]
 optional = true
 
+[dependencies.serde]
+version = "1.0.188"
+features = ["derive"]
+optional = true
+
+[dependencies.serde_json]
+version = "1.0.105"
+optional = true
+
 [dependencies.url]
 version = "2.4.1"
 optional = true
@@ -58,7 +67,7 @@ rustls_backend = ["reqwest/rustls", "tokio-tungstenite/rustls"]
 
 native_tls_backend = ["reqwest/native-tls", "tokio-tungstenite/native-tls"]
 
-http = ["reqwest", "url"]
+http = ["reqwest", "serde", "serde_json", "url"]
 http3 = ["http", "reqwest/http3"]
 utils = []
 

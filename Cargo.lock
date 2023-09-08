@@ -189,6 +189,8 @@ dependencies = [
  "async-trait",
  "once_cell",
  "reqwest",
+ "serde",
+ "serde_json",
  "tokio",
  "tokio-tungstenite",
  "url",
