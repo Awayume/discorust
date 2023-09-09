@@ -37,7 +37,7 @@ tokio-tungstenite = "0.20.0"
 
 [dependencies.reqwest]
 version = "0.11.20"
-features = ["gzip", "json"]
+features = ["json"]
 optional = true
 
 [dependencies.serde]
@@ -61,7 +61,7 @@ optional = true
 default = ["default_no_backend", "rustls_backend"]
 default_native_tls = ["default_no_backend", "native_tls_backend"]
 
-default_no_backend = ["http", "utils"]
+default_no_backend = ["http", "http_compression_gzip", "utils"]
 
 rustls_backend = ["reqwest/rustls", "tokio-tungstenite/rustls"]
 
@@ -69,6 +69,10 @@ native_tls_backend = ["reqwest/native-tls", "tokio-tungstenite/native-tls"]
 
 http = ["reqwest", "serde", "serde_json", "url"]
 http3 = ["http", "reqwest/http3"]
+http_compression_gzip = ["reqwest/gzip"]
+http_compression_brotli = ["reqwest/brotli"]
+http_compression_deflate = ["reqwest/deflate"]
+
 utils = []
 
 
