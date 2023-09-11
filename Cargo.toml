@@ -46,7 +46,7 @@ features = ["derive"]
 optional = true
 
 [dependencies.serde_json]
-version = "1.0.105"
+version = "1.0.106"
 optional = true
 
 [dependencies.url]
